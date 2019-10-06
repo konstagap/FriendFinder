@@ -12,13 +12,13 @@ module.exports = function(app) {
   var minimmuScore = 99;
 
   for (var i = 0; i < possibleMatch.length; i++) {
-    var scoreDifference = 0;
+    var totalDifference = 0;
     for (var a = 0; a < newPerson.scores.length; a++) {
-      scoreDifference += Math.abs(parseInt(newPerson.scores[a]) - parseInt(possibleMatch[i].scores[a]));
+      totalDifference += Math.abs(parseInt(newPerson.scores[a]) - parseInt(possibleMatch[i].scores[a]));
     }
-    if (scoreDifference < minimmuScore) {
+    if (totalDifference < minimmuScore) {
       matchPosition = i;
-      minimmuScore = scoreDifference;
+      minimmuScore = totalDifference;
     }
   }
   // console.log(possibleMatch[matchPosition])

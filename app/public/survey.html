@@ -10,12 +10,6 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-    <!-- Font Awesome Glyphicons -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-
-    <!-- Chosen -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
     <style>
         h1,
         h2,
@@ -27,129 +21,118 @@
 </head>
 
 <body>
-
     <div class="container">
-
-        <h2>Survey Questions</h2>
-        <hr>
-        <div class="row text-center">
-            <div class="col-md-6">
-                <h3><strong>Your Name</strong></h3>
-                <h4>Name (Required)</h4>
-                <input type="text" id="name" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <h3><strong>Your best picture</strong></h3>
-                <h4>Link to Photo Image (Required)</h4>
-                <input type="text" id="photo" class="form-control" required>
-            </div>
-        </div>
-
-
-        <hr>
-        <div class="row text-center">
-            <div class="col-md-6">
-                <h3><strong>Question 1</strong></h3>
-                <h4>You like CATS MORE than dogs.</h4>
-                <select class="chosen-select" id="q1">
-                        <option value=""></option>
-                        <option value="1">1 (Agree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Disagree)</option>
-                </select>
-
-                <h3><strong>Question 2</strong></h3>
-                <h4>Going hiking is better than watching people hiking on youtube.</h4>
-                <select class="chosen-select" id="q2">
-                        <option value=""></option>
-                        <option value="1">1 (Agree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Disagree)</option>
-                </select>
-
-
-                <h3><strong>Question 3</strong></h3>
-                <h4>Eating In-n-Out is NOT bad for you.</h4>
-                <select class="chosen-select" id="q3">
-                    <option value=""></option>
-                    <option value="1">1 (Agree)</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5 (Disagree)</option>
-                </select>
-
-            </div>
-            <div class="col-md-6">
-
-                <h3><strong>Question 4</strong></h3>
-                <h4>You like 90th east-coast hip-hop.</h4>
-                <select class="chosen-select" id="q4">
-                        <option value=""></option>
-                        <option value="1">1 (Agree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Disagree)</option>
-                </select>
-
-
-                <h3><strong>Question 5</strong></h3>
-                <h4>Kambucha is overrated</h4>
-                <select class="chosen-select" id="q5">
-                        <option value=""></option>
-                        <option value="1">1 (Agree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Disagree)</option>
-                </select>
-
-                <h3><strong>Question 6</strong></h3>
-                <h4>Surfing is fun but coding is important.</h4>
-                <select class="chosen-select" id="q6">
-                        <option value=""></option>
-                        <option value="1">1 (Agree)</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5 (Disagree)</option>
-                </select>
-
-            </div>
-        </div>
-
-
-        <br>
-        <br>
-
-        <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal"
-            id="submit"><i class="fa fa-check-circle"></i>
-            Submit</button>
-
-        <hr>
-        <footer class="footer">
+        <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <p><a href="/api/friends">API Friends List</a> |  <a href="/">HOME</a> 
+                <form>
+                    <h2>Survey Questions</h2>
+                    <hr>
+
+                    <div class="row text-center">
+                        <div class="col-md-6">
+                            <input type="text" id="name" placeholder="Your Name(Required)"
+                                class="form-control form-control-lg" required>
+                        </div>
+                        <div class="col-md-6">
+
+                            <input type="text" id="photo" placeholder="Your best picture link(Required)"
+                                class="form-control form-control-lg" required>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row text-center">
+                        <div class="col-md-6">
+                            <h4>You like CATS MORE than dogs.</h4>
+                            <select class="form-control" id="q1">
+                                <option value=""></option>
+                                <option value="1">1 (Agree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Disagree)</option>
+                            </select>
+
+                            <h4>Hiking is better than watching youtube.</h4>
+                            <select class="form-control" id="q2">
+                                <option value=""></option>
+                                <option value="1">1 (Agree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Disagree)</option>
+                            </select>
+
+                            <h4>Eating In-n-Out is NOT bad for you.</h4>
+                            <select class="form-control" id="q3">
+                                <option value=""></option>
+                                <option value="1">1 (Agree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Disagree)</option>
+                            </select>
+
+                        </div>
+                        <div class="col-md-6">
+                            <h4>You like 90th east-coast hip-hop.</h4>
+                            <select class="form-control" id="q4">
+                                <option value=""></option>
+                                <option value="1">1 (Agree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Disagree)</option>
+                            </select>
+
+                            <h4>Kambucha is overrated</h4>
+                            <select class="form-control" id="q5">
+                                <option value=""></option>
+                                <option value="1">1 (Agree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Disagree)</option>
+                            </select>
+
+
+                            <h4>Surfing is fun but coding is important.</h4>
+                            <select class="form-control" id="q6">
+                                <option value=""></option>
+                                <option value="1">1 (Agree)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Disagree)</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row text-center">
+                        <div class="col-md-12">
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn btn-success btn-lg " id="submit">
+                                Submit</button>
+                        </div>
+                    </div>
+                </form>
+                <hr>
+                <footer class="footer">
+                    <div class="container">
+                        <p><a href="/api/friends">API Friends List</a> | <a href="/">HOME</a>
+                    </div>
+                </footer>
             </div>
-        </footer>
-
-
-
+        </div>
+    </div>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
+        <div id="results-modal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 class="modal-title" id="exampleModalLabel">Your perfect match is</h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </button>
                     </div>
                     <div class="modal-body">
@@ -157,50 +140,51 @@
                         <div id="matchPicture"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            $("#submit").on("click", function (event) {
 
+                if ($("#name").val() && $("#photo").val()) {
 
-    </div>
+                    event.preventDefault();
+                    var newPerson = {
+                        name: $("#name").val().trim(),
+                        photo: $("#photo").val().trim(),
+                        scores: [
+                            $("#q1").val().trim(),
+                            $("#q2").val().trim(),
+                            $("#q3").val().trim(),
+                            $("#q4").val().trim(),
+                            $("#q5").val().trim(),
+                            $("#q6").val().trim()
 
-    <script type="text/javascript">
-        $("#submit").on("click", function (event) {
-            event.preventDefault();
-            var newPerson = {
-                name: $("#name").val().trim(),
-                photo: $("#photo").val().trim(),
-                scores: [
-                    $("#q1").val().trim(),
-                    $("#q2").val().trim(),
-                    $("#q3").val().trim(),
-                    $("#q4").val().trim(),
-                    $("#q5").val().trim(),
-                    $("#q6").val().trim()
+                        ]
+                    };
+                    // console.log(newPerson);
+                    $.post("/api/friends", newPerson,
+                        function (data) {
+                            console.log("this what u looking for" + data.photo)
+                            $("#matchName").text(data.name)
+                            $("#matchPicture").html("<img src=" + data.photo + "  class='img-fluid img-thumbnail'  alt='your match pic'>")
+                            $("#results-modal").modal("toggle");
+                        })
+                    $("#name").val(''),
+                        $("#photo").val(''),
+                        $("#q1").val(''),
+                        $("#q2").val(''),
+                        $("#q3").val(''),
+                        $("#q4").val(''),
+                        $("#q5").val(''),
+                        $("#q6").val('')
+                }
+            })
 
-                ]
-            };
-            // console.log(newPerson);
-            $.post("/api/friends", newPerson,
-                function (data) {
-                    console.log("this what u looking for" + data.photo)
-                    $("#matchName").text(data.name)
-                    $("#matchPicture").html("<img src=" + data.photo + "  class='img-fluid img-thumbnail'  alt='your match pic'>")
-                })
-            $("#name").val(''),
-                $("#photo").val(''),
-                $("#q1").val(''),
-                $("#q2").val(''),
-                $("#q3").val(''),
-                $("#q4").val(''),
-                $("#q5").val(''),
-                $("#q6").val()
-
-        })
-
-    </script>
+        </script>
 
 </body>
+
 </html>
